@@ -1,0 +1,3272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Fuerza del Pueblo – Honduras para Adelante (Wireframe Mejorado)</title>
+    <meta name="description" content="Somos millones, somos organización, somos la Refundación que avanza. Únete a la lucha por refundar Honduras.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #171717;
+            background: #fafafa;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+
+
+
+
+        /* Preview Container */
+        .preview-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            background: white;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            border-bottom: 1px solid #e5e5e5;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 12px 16px;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: #2563eb;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .logo-text {
+            font-weight: bold;
+            color: #1e3a8a;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 4px;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #404040;
+            font-weight: 500;
+            font-size: 14px;
+            padding: 8px 12px;
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+
+        .nav-menu a:hover {
+            background: #dbeafe;
+            color: #2563eb;
+        }
+
+        .cta-button {
+            background: #2563eb;
+            color: white;
+            padding: 8px 16px;
+            border: 1px solid #2563eb;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .cta-button:hover {
+            background: #1d4ed8;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            padding: 8px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .mobile-menu {
+            display: none;
+            background: white;
+            border-top: 1px solid #e5e5e5;
+            padding: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .mobile-menu a {
+            display: flex;
+            align-items: center;
+            padding: 12px 16px;
+            color: #374151;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            margin-bottom: 4px;
+        }
+
+        .mobile-menu a:hover {
+            background: rgba(30, 58, 138, 0.1);
+            color: #1e3a8a;
+        }
+
+        .mobile-menu.show {
+            display: block;
+        }
+
+        /* Header social links */
+        .header-social {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .header-social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            background: rgba(30, 58, 138, 0.1);
+            border: 1px solid rgba(30, 58, 138, 0.2);
+            border-radius: 5px;
+            color: #1e3a8a;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .header-social-link:hover {
+            background: #1e3a8a;
+            color: white;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(30, 58, 138, 0.3);
+        }
+
+        /* Section Frame */
+        .section-frame {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 16px 28px;
+        }
+
+        .section-content {
+            border: 2px dashed #d4d4d4;
+            border-radius: 16px;
+            background: #fafafa;
+            padding: 32px;
+            width: 100%;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #1e3a8a;
+        }
+
+        .section-hint {
+            background: #fef3c7;
+            color: #92400e;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* Hero Section */
+        .hero {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 48px 32px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero-badge {
+            background: #fef3c7;
+            color: #92400e;
+            padding: 4px 8px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            display: inline-block;
+            width: fit-content;
+            margin-bottom: 8px;
+        }
+
+        .hero-title {
+            font-size: 60px;
+            font-weight: 900;
+            line-height: 1.1;
+            color: #171717;
+            margin-bottom: 16px;
+        }
+
+        .hero-title-highlight {
+            color: #2563eb;
+            text-decoration: underline;
+            text-decoration-color: #fbbf24;
+            text-decoration-thickness: 4px;
+        }
+
+        .hero-subtitle {
+            font-size: 20px;
+            color: #525252;
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #2563eb;
+            color: white;
+            padding: 16px 24px;
+            border: 1px solid #2563eb;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            transition: background 0.2s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            color: #2563eb;
+            padding: 16px 24px;
+            border: 2px solid #2563eb;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .btn-secondary:hover {
+            background: #dbeafe;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 16px;
+            border: 2px dashed #10b981;
+            border-radius: 8px;
+            background: #ecfdf5;
+        }
+
+        .stat-card.purple {
+            border-color: #8b5cf6;
+            background: #f3e8ff;
+        }
+
+        .stat-card.amber {
+            border-color: #f59e0b;
+            background: #fef3c7;
+        }
+
+        .stat-number {
+            font-size: 24px;
+            font-weight: bold;
+            color: #047857;
+            margin-bottom: 4px;
+        }
+
+        .stat-number.purple {
+            color: #7c3aed;
+        }
+
+        .stat-number.amber {
+            color: #d97706;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: #065f46;
+            font-weight: 500;
+        }
+
+        .stat-label.purple {
+            color: #6b21a8;
+        }
+
+        .stat-label.amber {
+            color: #92400e;
+        }
+
+        .hero-image {
+            border: 2px dashed #93c5fd;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+            padding: 24px;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #1d4ed8;
+        }
+
+        .hero-flag {
+            font-size: 64px;
+            margin-bottom: 16px;
+        }
+
+        .hero-image-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .hero-image-subtitle {
+            font-size: 14px;
+            opacity: 0.75;
+            margin-bottom: 16px;
+        }
+
+        .hero-preview-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            width: 100%;
+            max-width: 200px;
+        }
+
+        .hero-preview-item {
+            aspect-ratio: 1;
+            background: #93c5fd;
+            border-radius: 8px;
+        }
+
+        /* FAQ Styles */
+        .faq-container {
+            max-width: 400px;
+        }
+
+        .faq-header {
+            background: #e9d5ff;
+            color: #6b21a8;
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+
+        .faq-item {
+            border: 2px dashed #d4d4d4;
+            border-radius: 8px;
+            background: white;
+            overflow: hidden;
+            margin-bottom: 8px;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 12px 16px;
+            background: none;
+            border: none;
+            text-align: left;
+            font-size: 14px;
+            font-weight: 600;
+            color: #404040;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.2s;
+        }
+
+        .faq-question:hover {
+            background: #fafafa;
+        }
+
+        .faq-answer {
+            padding: 0 16px 16px;
+            font-size: 14px;
+            color: #525252;
+            line-height: 1.6;
+            border-top: 1px solid #e5e5e5;
+            padding-top: 12px;
+            display: none;
+        }
+
+        .faq-answer.show {
+            display: block;
+        }
+
+        /* Principles Grid */
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .principle-card {
+            border: 2px dashed #10b981;
+            border-radius: 8px;
+            background: #ecfdf5;
+            padding: 16px;
+        }
+
+        .principle-text {
+            font-size: 14px;
+            font-weight: 500;
+            color: #065f46;
+        }
+
+        /* Achievement Cards */
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+
+        .achievement-card {
+            border: 2px dashed #d4d4d4;
+            border-radius: 12px;
+            background: white;
+            overflow: hidden;
+            transition: box-shadow 0.2s;
+        }
+
+        .achievement-card:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .achievement-header {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: white;
+            padding: 24px;
+            text-align: center;
+        }
+
+        .achievement-kpi {
+            font-size: 48px;
+            font-weight: 900;
+            color: #fbbf24;
+            margin-bottom: 8px;
+        }
+
+        .achievement-unit {
+            font-size: 14px;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
+        .achievement-content {
+            padding: 20px;
+        }
+
+        .achievement-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #171717;
+            margin-bottom: 12px;
+        }
+
+        .achievement-description {
+            font-size: 14px;
+            color: #525252;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .achievement-source {
+            font-size: 12px;
+            color: #737373;
+            background: #fafafa;
+            padding: 8px;
+            border-radius: 4px;
+            border-left: 4px solid #2563eb;
+            margin-bottom: 16px;
+        }
+
+        .download-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .download-btn {
+            padding: 6px 12px;
+            border: 1px solid;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .download-btn.png {
+            border-color: #93c5fd;
+            background: #dbeafe;
+            color: #1d4ed8;
+        }
+
+        .download-btn.story {
+            border-color: #86efac;
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .download-btn.pdf {
+            border-color: #fde68a;
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .action-btn {
+            flex: 1;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .action-btn.whatsapp {
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .action-btn.whatsapp.copied {
+            background: #22c55e;
+            color: white;
+        }
+
+        .action-btn.share {
+            background: #dbeafe;
+            color: #1d4ed8;
+        }
+
+        /* Event Cards */
+        .event-filters {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 8px 16px;
+            border: 1px solid #d4d4d4;
+            border-radius: 20px;
+            background: white;
+            color: #525252;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .filter-btn.active {
+            background: #2563eb;
+            color: white;
+            border-color: #2563eb;
+        }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .event-card {
+            border: 2px dashed #d4d4d4;
+            border-radius: 12px;
+            background: white;
+            padding: 20px;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+
+        .event-card:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .event-header {
+            margin-bottom: 16px;
+        }
+
+        .event-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+
+        .event-type-badge {
+            padding: 4px 8px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 500;
+        }
+
+        .event-type-badge.marcha {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+
+        .event-type-badge.reunion {
+            background: #dbeafe;
+            color: #1d4ed8;
+        }
+
+        .event-type-badge.capacitacion {
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .event-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #171717;
+            margin-bottom: 12px;
+        }
+
+        .event-details {
+            font-size: 14px;
+            color: #525252;
+            margin-bottom: 16px;
+        }
+
+        .event-detail {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 4px;
+        }
+
+        .event-description {
+            font-size: 14px;
+            color: #525252;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .event-map {
+            border: 1px dashed #93c5fd;
+            border-radius: 8px;
+            background: #dbeafe;
+            padding: 24px;
+            text-align: center;
+            font-size: 12px;
+            color: #1d4ed8;
+            margin-bottom: 16px;
+        }
+
+        .event-actions {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        /* Modal */
+        .modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 12px;
+            max-width: 400px;
+            width: 100%;
+            padding: 24px;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 16px;
+        }
+
+        .modal-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #1e3a8a;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #737373;
+            cursor: pointer;
+            padding: 0;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .modal-input {
+            padding: 12px;
+            border: 1px solid #d4d4d4;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        .modal-input:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        /* Material Cards */
+        .materials-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+            width: 100%;
+        }
+
+        .material-featured {
+            width: 100%;
+            margin-bottom: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.3s ease;
+            width: 100%;
+        }
+
+        .carousel-slide {
+            min-width: 33.333%;
+            flex-shrink: 0;
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+
+        .carousel-controls {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 18px;
+            color: #1d4ed8;
+            transition: all 0.2s;
+            z-index: 10;
+        }
+
+        .carousel-controls:hover {
+            background: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .carousel-prev {
+            left: 16px;
+        }
+
+        .carousel-next {
+            right: 16px;
+        }
+
+        .carousel-indicators {
+            position: absolute;
+            bottom: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            z-index: 10;
+        }
+
+        .carousel-indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .carousel-indicator.active {
+            background: white;
+            transform: scale(1.2);
+        }
+
+        /* Responsive carousel */
+        @media (max-width: 1024px) {
+            .carousel-slide {
+                min-width: 50%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .carousel-slide {
+                min-width: 100%;
+                padding: 0 8px;
+            }
+            
+            .material-card {
+                padding: 16px !important;
+                margin: 0 !important;
+            }
+            
+            .material-preview {
+                padding: 16px !important;
+            }
+            
+            .material-icon {
+                font-size: 32px !important;
+                margin-bottom: 8px !important;
+            }
+            
+            .material-preview-title {
+                font-size: 16px !important;
+                margin-bottom: 6px !important;
+            }
+            
+            .material-preview-subtitle {
+                font-size: 13px !important;
+            }
+            
+            .download-btn {
+                padding: 6px 12px !important;
+                font-size: 12px !important;
+            }
+            
+            /* Espaciado general móvil */
+            .section-frame {
+                padding: 16px 16px !important;
+            }
+            
+            .section-content {
+                padding: 20px 0;
+            }
+            
+            .section-title {
+                font-size: 24px !important;
+                margin-bottom: 16px;
+            }
+            
+            /* Responsive para sección Nuestra Lucha */
+            .about-optimized-grid {
+                grid-template-columns: 1fr !important;
+                gap: 24px !important;
+            }
+            
+            .principles-compact-grid {
+                grid-template-columns: 1fr !important;
+                gap: 12px !important;
+            }
+            
+            .principles-compact-item {
+                text-align: center !important;
+                padding: 12px !important;
+                flex-direction: column;
+                gap: 8px !important;
+            }
+            
+            .principles-compact-item span {
+                font-size: 13px !important;
+            }
+        }
+
+        .material-card {
+            border: 2px dashed #93c5fd;
+            border-radius: 12px;
+            background: #dbeafe;
+            padding: 24px;
+        }
+
+        .material-badge {
+            background: #1d4ed8;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+
+        .material-preview {
+            border: 1px solid #93c5fd;
+            border-radius: 8px;
+            background: white;
+            padding: 32px;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        .material-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        .material-preview-title {
+            font-size: 14px;
+            font-weight: 500;
+            color: #1e3a8a;
+            margin-bottom: 8px;
+        }
+
+        .material-preview-subtitle {
+            font-size: 12px;
+            color: #2563eb;
+        }
+
+        .material-list {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            width: 100%;
+        }
+
+        .material-item {
+            border: 2px dashed #d4d4d4;
+            border-radius: 12px;
+            background: white;
+            padding: 24px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            transition: all 0.2s;
+            text-align: center;
+            min-height: 220px;
+            width: 100%;
+        }
+
+        .material-item:hover {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .material-item-icon {
+            font-size: 32px;
+            margin: 0 auto 6px auto;
+        }
+
+        .material-item-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .material-item-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #171717;
+            margin-bottom: 6px;
+            line-height: 1.2;
+        }
+
+        .material-item-description {
+            font-size: 12px;
+            color: #525252;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .material-formats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            justify-content: center;
+            margin-bottom: 12px;
+        }
+
+        .format-tag {
+            background: #f0f9ff;
+            color: #0369a1;
+            padding: 3px 6px;
+            border-radius: 10px;
+            font-size: 10px;
+            font-weight: 500;
+            border: 1px solid #e0f2fe;
+        }
+
+        .material-download {
+            background: #2563eb;
+            color: white;
+            padding: 6px 12px;
+            border: none;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            align-self: center;
+            min-width: 70px;
+        }
+
+        .material-download:hover {
+            background: #1d4ed8;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+
+        /* Form Styles */
+        .subscribe-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-intro {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .form-intro-title {
+            font-size: 18px;
+            color: #525252;
+            margin-bottom: 16px;
+        }
+
+        .form-stats {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            font-size: 14px;
+            color: #525252;
+        }
+
+        .form-stat {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .form-stat-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .form-stat-dot.green {
+            background: #22c55e;
+        }
+
+        .form-stat-dot.blue {
+            background: #3b82f6;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-label {
+            font-size: 14px;
+            font-weight: 500;
+            color: #525252;
+        }
+
+        .form-input, .form-select {
+            padding: 12px;
+            border: 1px solid #d4d4d4;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        .form-input:focus, .form-select:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .form-checkbox {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin: 24px 0;
+        }
+
+        .form-checkbox input {
+            margin-top: 4px;
+            width: 16px;
+            height: 16px;
+        }
+
+        .form-checkbox-text {
+            font-size: 14px;
+            color: #525252;
+        }
+
+        .form-checkbox-link {
+            color: #2563eb;
+            text-decoration: underline;
+        }
+
+        .form-checkbox-link:hover {
+            color: #1d4ed8;
+        }
+
+        .form-submit {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .form-button {
+            background: #2563eb;
+            color: white;
+            padding: 16px 32px;
+            border: 1px solid #2563eb;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .form-button:hover {
+            background: #1d4ed8;
+        }
+
+        .form-captcha {
+            border: 2px dashed #d4d4d4;
+            border-radius: 8px;
+            padding: 12px 16px;
+            font-size: 12px;
+            color: #737373;
+        }
+
+        .form-messages {
+            border: 2px dashed #d4d4d4;
+            border-radius: 8px;
+            padding: 16px;
+            margin-top: 16px;
+        }
+
+        .success-message {
+            text-align: center;
+            color: #166534;
+            background: #ecfdf5;
+            padding: 16px;
+            border-radius: 8px;
+        }
+
+        .success-icon {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .success-title {
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .success-text {
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .success-action {
+            color: #2563eb;
+            text-decoration: underline;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .success-action:hover {
+            color: #1d4ed8;
+        }
+
+        .placeholder-message {
+            font-size: 14px;
+            color: #525252;
+            text-align: center;
+        }
+
+        /* Footer */
+        .footer {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 16px 32px 48px;
+        }
+
+        .footer-content {
+            border: 2px dashed #d4d4d4;
+            border-radius: 16px;
+            background: #171717;
+            color: white;
+            padding: 32px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 32px;
+            margin-bottom: 32px;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .footer-logo {
+            width: 40px;
+            height: 40px;
+            background: #3b82f6;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .footer-brand-text {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .footer-description {
+            color: #d4d4d8;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: #404040;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+
+        .social-link:hover {
+            background: #3b82f6;
+        }
+
+        .footer-section-title {
+            color: #fbbf24;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .footer-link {
+            color: #d4d4d8;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-link:hover {
+            color: #fbbf24;
+        }
+
+        .footer-contact-item {
+            color: #d4d4d8;
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #404040;
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .footer-copyright {
+            color: #a3a3a3;
+            font-size: 14px;
+        }
+
+        .footer-made {
+            color: #737373;
+            font-size: 12px;
+        }
+
+        /* Responsive */
+        /* Media queries responsive */
+        @media (max-width: 1024px) {
+            .header-social-link {
+                width: 26px;
+                height: 26px;
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .header-social {
+                display: none;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .hero-title {
+                font-size: 32px;
+                line-height: 1.2;
+                margin-bottom: 16px;
+            }
+            
+            .hero-subtitle {
+                font-size: 16px;
+                line-height: 1.5;
+                margin-bottom: 24px;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+                gap: 12px;
+                align-items: stretch;
+            }
+            
+            .hero-cta .btn-primary,
+            .hero-cta .btn-secondary {
+                width: 100%;
+                justify-content: center;
+                padding: 14px 24px;
+                font-size: 16px;
+                font-weight: 600;
+            }
+
+            .hero-subtitle {
+                font-size: 18px;
+            }
+
+            .hero-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 24px;
+            }
+
+            .achievements-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .events-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .materials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .material-featured {
+                grid-column: span 1;
+            }
+
+            .material-list {
+                grid-template-columns: 1fr;
+            }
+
+            /* Responsive para formulario de suscripción */
+            .subscribe-form-container {
+                grid-template-columns: 1fr !important;
+                gap: 24px !important;
+            }
+            
+            /* Optimización de formulario móvil */
+            .form-row {
+                flex-direction: column !important;
+                gap: 12px !important;
+            }
+            
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                font-size: 16px !important;
+                padding: 12px 16px !important;
+                border-radius: 8px !important;
+            }
+            
+            .btn-primary {
+                padding: 14px 24px !important;
+                font-size: 16px !important;
+                width: 100% !important;
+                border-radius: 8px !important;
+            }
+            
+            /* Optimización de logros móvil */
+            .achievements-grid {
+                grid-template-columns: 1fr !important;
+                gap: 16px !important;
+            }
+            
+            .achievement-card {
+                padding: 16px !important;
+            }
+            
+            .achievement-header {
+                margin-bottom: 12px !important;
+            }
+            
+            .achievement-title {
+                font-size: 16px !important;
+            }
+            
+            .achievement-subtitle {
+                font-size: 13px !important;
+            }
+            
+            /* Microcomponentes hero móvil */
+            .hero-microcomponents {
+                flex-direction: column !important;
+                gap: 12px !important;
+                margin-top: 24px !important;
+            }
+            
+            .micro-stat {
+                padding: 12px 16px !important;
+                min-width: auto !important;
+            }
+            
+            .micro-number {
+                font-size: 18px !important;
+            }
+            
+            .micro-label {
+                font-size: 12px !important;
+            }
+            
+            /* Navegación sticky móvil */
+            .navbar {
+                padding: 8px 16px !important;
+            }
+            
+            .logo-text {
+                font-size: 16px !important;
+            }
+            
+            .mobile-menu-btn {
+                padding: 10px !important;
+                font-size: 18px !important;
+            }
+            
+            /* FAQ móvil optimizado */
+            .faq-question {
+                font-size: 14px !important;
+                padding: 12px 14px !important;
+            }
+            
+            .faq-answer {
+                font-size: 13px !important;
+                padding: 12px 14px !important;
+                line-height: 1.4 !important;
+            }
+            
+            /* Grid de eventos móvil */
+            .events-grid {
+                grid-template-columns: 1fr !important;
+                gap: 12px !important;
+            }
+            
+            .event-card {
+                padding: 14px !important;
+            }
+            
+            .event-title {
+                font-size: 15px !important;
+            }
+            
+            /* Botones de autenticación en móvil */
+            .subscribe-form > div:first-child {
+                margin-bottom: 24px !important;
+            }
+            
+            .subscribe-form > div:first-child > div:nth-child(2) {
+                flex-direction: column !important;
+                gap: 12px !important;
+            }
+            
+            .subscribe-form > div:first-child > div:nth-child(2) button {
+                width: 100% !important;
+                padding: 16px 20px !important;
+                font-size: 16px !important;
+                min-height: 48px !important;
+            }
+            
+            .subscribe-form > div:first-child > div:nth-child(2) button span:last-child {
+                font-size: 16px !important;
+                font-weight: 600 !important;
+            }
+            
+            .event-details {
+                font-size: 12px !important;
+            }
+            
+            /* Grid de materiales móvil */
+            .material-list {
+                grid-template-columns: 1fr !important;
+                gap: 12px !important;
+            }
+            
+            .material-item {
+                padding: 16px !important;
+                min-height: auto !important;
+            }
+            
+            .material-item-title {
+                font-size: 15px !important;
+            }
+            
+            .material-item-description {
+                font-size: 13px !important;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .material-list {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+
+    <!-- Preview Container -->
+    <div class="preview-container" id="previewContainer">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-content">
+                <div class="logo-section">
+                    <div class="logo-icon">FP</div>
+                    <span class="logo-text">La Fuerza del Pueblo</span>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#quienes-somos">Nuestra lucha</a></li>
+                    <li><a href="#logros">Logros</a></li>
+                    <li><a href="#movilizate">Movilízate</a></li>
+                    <li><a href="#materiales">Materiales</a></li>
+                    <li><a href="#suscribite">Suscríbete</a></li>
+                </ul>
+                
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <!-- Redes sociales en header -->
+                    <div class="header-social">
+                        <a href="https://facebook.com/fuerzadelpueblohn" class="header-social-link" title="Facebook" target="_blank">f</a>
+                        <a href="https://instagram.com/fuerzadelpueblohn" class="header-social-link" title="Instagram" target="_blank">📷</a>
+                        <a href="https://twitter.com/fuerzadelpueblohn" class="header-social-link" title="Twitter" target="_blank">🐦</a>
+                        <a href="https://youtube.com/@fuerzadelpueblohn" class="header-social-link" title="YouTube" target="_blank">📺</a>
+                    </div>
+                    <a href="#suscribite" class="cta-button">✊ Súmate</a>
+                    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+                </div>
+            </div>
+            
+            <div class="mobile-menu" id="mobileMenu">
+                <div style="display: flex; flex-direction: column; gap: 4px;">
+                    <a href="#inicio" onclick="toggleMobileMenu()">🏠 Inicio</a>
+                    <a href="#quienes-somos" onclick="toggleMobileMenu()">💪 Nuestra lucha</a>
+                    <a href="#logros" onclick="toggleMobileMenu()">🏆 Logros</a>
+                    <a href="#movilizate" onclick="toggleMobileMenu()">📅 Movilízate</a>
+                    <a href="#materiales" onclick="toggleMobileMenu()">📁 Materiales</a>
+                    <a href="#suscribite" onclick="toggleMobileMenu()">✉️ Suscríbete</a>
+                    
+                    <!-- Redes sociales en menú móvil -->
+                    <div style="border-top: 1px solid #e5e5e5; margin-top: 12px; padding-top: 12px;">
+                        <div style="font-size: 12px; color: #666; margin-bottom: 8px; font-weight: 600;">Síguenos:</div>
+                        <div style="display: flex; gap: 8px;">
+                            <a href="https://facebook.com/fuerzadelpueblohn" style="display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: rgba(30, 58, 138, 0.1); border-radius: 6px; color: #1e3a8a; text-decoration: none; font-weight: bold;" title="Facebook" target="_blank">f</a>
+                            <a href="https://instagram.com/fuerzadelpueblohn" style="display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: rgba(30, 58, 138, 0.1); border-radius: 6px; color: #1e3a8a; text-decoration: none; font-weight: bold;" title="Instagram" target="_blank">📷</a>
+                            <a href="https://twitter.com/fuerzadelpueblohn" style="display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: rgba(30, 58, 138, 0.1); border-radius: 6px; color: #1e3a8a; text-decoration: none; font-weight: bold;" title="Twitter" target="_blank">🐦</a>
+                            <a href="https://youtube.com/@fuerzadelpueblohn" style="display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: rgba(30, 58, 138, 0.1); border-radius: 6px; color: #1e3a8a; text-decoration: none; font-weight: bold;" title="YouTube" target="_blank">📺</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <!-- Hero Section -->
+            <section id="inicio" class="hero">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <div class="hero-badge">🇭🇳 Hero principal</div>
+                        <h1 class="hero-title">
+                            La Fuerza del Pueblo: <span class="hero-title-highlight">Refundar</span> es tarea de todos
+                        </h1>
+                        <p class="hero-subtitle">
+                            Somos millones, somos organización, somos la <strong>Refundación que avanza</strong>.
+                        </p>
+                        
+                        <div class="hero-buttons">
+                            <a href="#suscribite" class="btn-primary">
+                                👥 Súmate a la fuerza
+                            </a>
+                            <a href="#movilizate" class="btn-secondary">
+                                📅 Próximas movilizaciones
+                            </a>
+                        </div>
+
+                        <div class="hero-stats">
+                            <div class="stat-card">
+                                <div class="stat-number" id="volunteerCount">+15,240</div>
+                                <div class="stat-label">Voluntarios activos</div>
+                            </div>
+                            <div class="stat-card purple">
+                                <div class="stat-label purple">Impacto en la población</div>
+                                <div class="stat-number purple" id="lastUpdate"></div>
+                            </div>
+                            <div class="stat-card amber">
+                                <div style="font-size: 24px; margin-bottom: 4px;">📤</div>
+                                <div class="stat-label amber">Compartir página</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-image">
+                        <div class="hero-flag">🇭🇳</div>
+                        <div class="hero-image-title">Imagen panorámica/collage</div>
+                        <div class="hero-image-subtitle">Militancia del pueblo hondureño</div>
+                        <div class="hero-preview-grid">
+                            <div class="hero-preview-item"></div>
+                            <div class="hero-preview-item" style="background: #60a5fa;"></div>
+                            <div class="hero-preview-item"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quiénes Somos Section -->
+            <section class="section-frame">
+                <div class="section-content">
+                    <div class="section-header">
+                        <h2 class="section-title">Nuestra lucha</h2>
+                        <span class="section-hint">bloque informativo + FAQ</span>
+                    </div>
+                    
+                    <div class="about-optimized-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
+                        <!-- Columna izquierda: Información principal -->
+                        <div>
+                            <div style="border: 2px solid #93c5fd; border-radius: 12px; background: white; padding: 24px; margin-bottom: 24px;">
+                                <p style="font-size: 18px; color: #404040; line-height: 1.6; margin-bottom: 16px;">
+                                    <strong style="color: #1d4ed8;">La Fuerza del Pueblo</strong> es la organización del pueblo para el pueblo. 
+                                    Nacimos para defender los logros alcanzados y para empujar, desde cada barrio y comunidad, 
+                                    la <strong style="color: #1d4ed8;">Refundación de Honduras</strong>.
+                                </p>
+                                <p style="color: #525252; line-height: 1.6;">
+                                    Somos la voz de millones que decidimos que no volverán los tiempos de saqueo y abandono. 
+                                    En tres años construimos un país que empieza a levantarse, y ese camino no se puede detener.
+                                </p>
+                            </div>
+
+                            <h3 style="font-size: 20px; font-weight: bold; color: #1e3a8a; margin-bottom: 16px;">🎯 Nuestros principios</h3>
+                            <div class="principles-compact-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                                <div class="principles-compact-item" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 1px solid #93c5fd; border-radius: 8px; padding: 16px; display: flex; align-items: center; gap: 12px;">
+                                    <span style="font-size: 24px;">✊</span>
+                                    <span style="font-size: 14px; font-weight: 600; color: #1e3a8a;">Justicia social y económica</span>
+                                </div>
+                                <div class="principles-compact-item" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 1px solid #93c5fd; border-radius: 8px; padding: 16px; display: flex; align-items: center; gap: 12px;">
+                                    <span style="font-size: 24px;">🔍</span>
+                                    <span style="font-size: 14px; font-weight: 600; color: #1e3a8a;">Transparencia pública</span>
+                                </div>
+                                <div class="principles-compact-item" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 1px solid #93c5fd; border-radius: 8px; padding: 16px; display: flex; align-items: center; gap: 12px;">
+                                    <span style="font-size: 24px;">🗳️</span>
+                                    <span style="font-size: 14px; font-weight: 600; color: #1e3a8a;">Participación ciudadana</span>
+                                </div>
+                                <div class="principles-compact-item" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 1px solid #93c5fd; border-radius: 8px; padding: 16px; display: flex; align-items: center; gap: 12px;">
+                                    <span style="font-size: 24px;">🇭🇳</span>
+                                    <span style="font-size: 14px; font-weight: 600; color: #1e3a8a;">Soberanía nacional</span>
+                                </div>
+                                <div class="principles-compact-item" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 1px solid #93c5fd; border-radius: 8px; padding: 16px; display: flex; align-items: center; gap: 12px; grid-column: 1 / -1;">
+                                    <span style="font-size: 24px;">⚖️</span>
+                                    <span style="font-size: 14px; font-weight: 600; color: #1e3a8a;">Respeto por los derechos humanos</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Columna derecha: FAQ mejorado -->
+                        
+                        <div style="background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); border-radius: 16px; padding: 24px; color: white; height: fit-content;">
+                            <div style="text-align: center; margin-bottom: 20px;">
+                                <div style="font-size: 32px; margin-bottom: 8px;">❓</div>
+                                <h3 style="color: white; margin: 0; font-size: 20px; font-weight: bold;">Mini-FAQ</h3>
+                                <p style="color: #dbeafe; margin: 4px 0 0 0; font-size: 14px;">Preguntas frecuentes</p>
+                            </div>
+                            
+                            <div style="space-y: 12px;">
+                                <div class="faq-item">
+                                    <button class="faq-question" onclick="toggleFAQ(0)" style="background: rgba(255,255,255,0.9); border: 1px solid rgba(255,255,255,0.4); color: #1e3a8a; width: 100%; text-align: left; padding: 14px 16px; border-radius: 8px; font-weight: 700; font-size: 15px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; transition: all 0.3s ease; margin-bottom: 8px;">
+                                        ¿Quiénes somos?
+                                        <span id="faq-icon-0" style="transition: transform 0.3s ease; color: #1e3a8a;">▼</span>
+                                    </button>
+                                    <div class="faq-answer" id="faq-answer-0" style="background: rgba(255,255,255,0.05); border-radius: 8px; padding: 16px; margin-bottom: 12px; font-size: 14px; line-height: 1.5; border-left: 3px solid #60a5fa;">
+                                        Somos un movimiento ciudadano comprometido con la refundación de Honduras. Trabajamos por un país más justo, 
+                                        transparente y próspero para todas las familias hondureñas.
+                                    </div>
+                                </div>
+                                
+                                <div class="faq-item">
+                                    <button class="faq-question" onclick="toggleFAQ(1)" style="background: rgba(255,255,255,0.9); border: 1px solid rgba(255,255,255,0.4); color: #1e3a8a; width: 100%; text-align: left; padding: 14px 16px; border-radius: 8px; font-weight: 700; font-size: 15px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; transition: all 0.3s ease; margin-bottom: 8px;">
+                                        ¿Cómo participar?
+                                        <span id="faq-icon-1" style="transition: transform 0.3s ease; color: #1e3a8a;">▼</span>
+                                    </button>
+                                    <div class="faq-answer" id="faq-answer-1" style="background: rgba(255,255,255,0.05); border-radius: 8px; padding: 16px; margin-bottom: 12px; font-size: 14px; line-height: 1.5; border-left: 3px solid #60a5fa;">
+                                        Puedes participar uniéndote a nuestras movilizaciones, siendo voluntario en tu comunidad, 
+                                        difundiendo mensajes en redes sociales, o contribuyendo con tus habilidades profesionales.
+                                    </div>
+                                </div>
+                                
+                                <div class="faq-item">
+                                    <button class="faq-question" onclick="toggleFAQ(2)" style="background: rgba(255,255,255,0.9); border: 1px solid rgba(255,255,255,0.4); color: #1e3a8a; width: 100%; text-align: left; padding: 14px 16px; border-radius: 8px; font-weight: 700; font-size: 15px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; transition: all 0.3s ease; margin-bottom: 8px;">
+                                        ¿Qué defendemos?
+                                        <span id="faq-icon-2" style="transition: transform 0.3s ease; color: #1e3a8a;">▼</span>
+                                    </button>
+                                    <div class="faq-answer" id="faq-answer-2" style="background: rgba(255,255,255,0.05); border-radius: 8px; padding: 16px; margin-bottom: 12px; font-size: 14px; line-height: 1.5; border-left: 3px solid #60a5fa;">
+                                        Defendemos la justicia social, la transparencia, la educación de calidad, la salud pública, 
+                                        el respeto por el medio ambiente, y una economía que sirva a las mayorías.
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Logros Section -->
+            <section id="logros" class="section-frame">
+                <div class="section-content">
+                    <div class="section-header">
+                        <h2 class="section-title">Lo que estamos logrando</h2>
+                        <span class="section-hint">cards descargables</span>
+                    </div>
+                    
+                    <div style="background: #dbeafe; border: 1px solid #93c5fd; border-radius: 8px; padding: 16px; margin-bottom: 24px;">
+                        <div style="font-size: 14px; color: #1e3a8a;">
+                            📊 <strong>Datos verificables:</strong> Cada logro incluye contexto, fuente oficial y opciones de descarga en múltiples formatos.
+                        </div>
+                    </div>
+                    
+                    <div class="achievements-grid">
+                        <div class="achievement-card">
+                            <div class="achievement-header">
+                                <div class="achievement-kpi">+42</div>
+                                <div class="achievement-unit">centros</div>
+                            </div>
+                            <div class="achievement-content">
+                                <h3 class="achievement-title">Centros de salud rehabilitados</h3>
+                                <p class="achievement-description">
+                                    Infraestructura médica mejorada en comunidades rurales de Honduras
+                                </p>
+                                <div class="achievement-source">
+                                    <strong>📋 Fuente:</strong> Ministerio de Salud Pública
+                                </div>
+                                <div class="download-buttons">
+                                    <button class="download-btn png">📷 PNG 1080×1080</button>
+                                    <button class="download-btn story">📱 Story 1080×1920</button>
+                                    <button class="download-btn pdf">📄 PDF</button>
+                                </div>
+                                <div class="action-buttons">
+                                    <button class="action-btn whatsapp" onclick="copyToWhatsApp('centros-salud')">
+                                        📱 WhatsApp
+                                    </button>
+                                    <button class="action-btn share">📤 Compartir</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="achievement-card">
+                            <div class="achievement-header">
+                                <div class="achievement-kpi">9</div>
+                                <div class="achievement-unit">hospitales</div>
+                            </div>
+                            <div class="achievement-content">
+                                <h3 class="achievement-title">Hospitales en construcción</h3>
+                                <p class="achievement-description">
+                                    Nuevos hospitales que beneficiarán a miles de familias hondureñas
+                                </p>
+                                <div class="achievement-source">
+                                    <strong>📋 Fuente:</strong> Secretaría de Obras Públicas
+                                </div>
+                                <div class="download-buttons">
+                                    <button class="download-btn png">📷 PNG 1080×1080</button>
+                                    <button class="download-btn story">📱 Story 1080×1920</button>
+                                    <button class="download-btn pdf">📄 PDF</button>
+                                </div>
+                                <div class="action-buttons">
+                                    <button class="action-btn whatsapp" onclick="copyToWhatsApp('hospitales')">
+                                        📱 WhatsApp
+                                    </button>
+                                    <button class="action-btn share">📤 Compartir</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="achievement-card">
+                            <div class="achievement-header">
+                                <div class="achievement-kpi">2M</div>
+                                <div class="achievement-unit">libros</div>
+                            </div>
+                            <div class="achievement-content">
+                                <h3 class="achievement-title">Libros para nuestras escuelas</h3>
+                                <p class="achievement-description">
+                                    Material educativo distribuido en escuelas públicas de todo el país
+                                </p>
+                                <div class="achievement-source">
+                                    <strong>📋 Fuente:</strong> Secretaría de Educación
+                                </div>
+                                <div class="download-buttons">
+                                    <button class="download-btn png">📷 PNG 1080×1080</button>
+                                    <button class="download-btn story">📱 Story 1080×1920</button>
+                                    <button class="download-btn pdf">📄 PDF</button>
+                                </div>
+                                <div class="action-buttons">
+                                    <button class="action-btn whatsapp" onclick="copyToWhatsApp('libros')">
+                                        📱 WhatsApp
+                                    </button>
+                                    <button class="action-btn share">📤 Compartir</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="achievement-card">
+                            <div class="achievement-header">
+                                <div class="achievement-kpi">✅</div>
+                                <div class="achievement-unit">ley aprobada</div>
+                            </div>
+                            <div class="achievement-content">
+                                <h3 class="achievement-title">Ley de Justicia Tributaria</h3>
+                                <p class="achievement-description">
+                                    Marco legal aprobado para una tributación más justa y equitativa
+                                </p>
+                                <div class="achievement-source">
+                                    <strong>📋 Fuente:</strong> Congreso Nacional
+                                </div>
+                                <div class="download-buttons">
+                                    <button class="download-btn png">📷 PNG 1080×1080</button>
+                                    <button class="download-btn story">📱 Story 1080×1920</button>
+                                    <button class="download-btn pdf">📄 PDF</button>
+                                </div>
+                                <div class="action-buttons">
+                                    <button class="action-btn whatsapp" onclick="copyToWhatsApp('ley')">
+                                        📱 WhatsApp
+                                    </button>
+                                    <button class="action-btn share">📤 Compartir</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="achievement-card">
+                            <div class="achievement-header">
+                                <div class="achievement-kpi">+5,200</div>
+                                <div class="achievement-unit">empleos</div>
+                            </div>
+                            <div class="achievement-content">
+                                <h3 class="achievement-title">Empleos dignos creados</h3>
+                                <p class="achievement-description">
+                                    Nuevas oportunidades laborales para jóvenes hondureños
+                                </p>
+                                <div class="achievement-source">
+                                    <strong>📋 Fuente:</strong> Secretaría de Trabajo
+                                </div>
+                                <div class="download-buttons">
+                                    <button class="download-btn png">📷 PNG 1080×1080</button>
+                                    <button class="download-btn story">📱 Story 1080×1920</button>
+                                    <button class="download-btn pdf">📄 PDF</button>
+                                </div>
+                                <div class="action-buttons">
+                                    <button class="action-btn whatsapp" onclick="copyToWhatsApp('empleos')">
+                                        📱 WhatsApp
+                                    </button>
+                                    <button class="action-btn share">📤 Compartir</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="achievement-card">
+                            <div class="achievement-header">
+                                <div class="achievement-kpi">1,850</div>
+                                <div class="achievement-unit">viviendas</div>
+                            </div>
+                            <div class="achievement-content">
+                                <h3 class="achievement-title">Viviendas sociales construidas</h3>
+                                <p class="achievement-description">
+                                    Hogares dignos entregados a familias de bajos recursos
+                                </p>
+                                <div class="achievement-source">
+                                    <strong>📋 Fuente:</strong> CONVIVIENDA
+                                </div>
+                                <div class="download-buttons">
+                                    <button class="download-btn png">📷 PNG 1080×1080</button>
+                                    <button class="download-btn story">📱 Story 1080×1920</button>
+                                    <button class="download-btn pdf">📄 PDF</button>
+                                </div>
+                                <div class="action-buttons">
+                                    <button class="action-btn whatsapp" onclick="copyToWhatsApp('viviendas')">
+                                        📱 WhatsApp
+                                    </button>
+                                    <button class="action-btn share">📤 Compartir</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 16px; margin-top: 32px;">
+                        <button class="btn-primary" style="font-size: 18px; padding: 16px 24px;">
+                            📦 Descargar todo (ZIP)
+                        </button>
+                        <div style="font-size: 12px; color: #737373; background: #f5f5f5; padding: 8px 12px; border-radius: 20px;">
+                            📊 Ref: Logros verificados - La Fuerza del Pueblo 2024
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Movilízate Section -->
+            <section id="movilizate" class="section-frame">
+                <div class="section-content">
+                    <div class="section-header">
+                        <h2 class="section-title">Movilízate con nosotros</h2>
+                        <span class="section-hint">calendario interactivo</span>
+                    </div>
+                    
+                    <div style="text-align: center; margin-bottom: 32px;">
+                        <blockquote style="font-size: 20px; font-weight: 600; color: #1d4ed8; font-style: italic; margin-bottom: 8px;">
+                            "Refundar es un camino que sigue y crece con el pueblo"
+                        </blockquote>
+                        <p style="color: #525252;">Únete a nuestras acciones y sé parte del cambio que Honduras necesita.</p>
+                    </div>
+
+                    <div class="event-filters">
+                        <button class="filter-btn active" onclick="filterEvents('todos')">🌟 Todos (12)</button>
+                        <button class="filter-btn" onclick="filterEvents('marchas')">👥 Marchas (4)</button>
+                        <button class="filter-btn" onclick="filterEvents('reuniones')">💼 Reuniones (3)</button>
+                        <button class="filter-btn" onclick="filterEvents('capacitaciones')">📚 Capacitaciones (5)</button>
+                    </div>
+
+                    <div class="events-grid">
+                        <div class="event-card" data-type="marchas">
+                            <div class="event-header">
+                                <div class="event-meta">
+                                    <div style="font-size: 11px; font-weight: 600; text-transform: uppercase; color: #737373; background: #f5f5f5; padding: 4px 8px; border-radius: 4px;">
+                                        Próxima actividad
+                                    </div>
+                                    <span class="event-type-badge marcha">marchas</span>
+                                </div>
+                                <h3 class="event-title">Marcha por la Justicia Social</h3>
+                                <div class="event-details">
+                                    <div class="event-detail">
+                                        <span>📅</span>
+                                        <span>Sáb 15 Feb, 09:00</span>
+                                    </div>
+                                    <div class="event-detail">
+                                        <span>📍</span>
+                                        <span>Parque Central, Tegucigalpa</span>
+                                    </div>
+                                    <div class="event-detail">
+                                        <span>👥</span>
+                                        <span>1250 confirmados</span>
+                                    </div>
+                                </div>
+                                <p class="event-description">
+                                    Manifestación pacífica por la justicia social y la transparencia. 
+                                    Únete a miles de hondureños en esta histórica movilización.
+                                </p>
+                            </div>
+                            
+                            <div class="event-map">
+                                🗺️ Mapa / Cómo llegar (placeholder)
+                            </div>
+                            
+                            <div class="event-actions">
+                                <button class="btn-primary" style="flex: 1;" onclick="openEventModal(1)">
+                                    ✊ Inscribirme
+                                </button>
+                                <button class="btn-secondary" style="padding: 12px 16px;">
+                                    📅 Calendario
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="event-card" data-type="reuniones">
+                            <div class="event-header">
+                                <div class="event-meta">
+                                    <div style="font-size: 11px; font-weight: 600; text-transform: uppercase; color: #737373; background: #f5f5f5; padding: 4px 8px; border-radius: 4px;">
+                                        Próxima actividad
+                                    </div>
+                                    <span class="event-type-badge reunion">reuniones</span>
+                                </div>
+                                <h3 class="event-title">Asamblea Ciudadana Regional Norte</h3>
+                                <div class="event-details">
+                                    <div class="event-detail">
+                                        <span>📅</span>
+                                        <span>Dom 18 Feb, 16:00</span>
+                                    </div>
+                                    <div class="event-detail">
+                                        <span>📍</span>
+                                        <span>Centro Cívico, San Pedro Sula</span>
+                                    </div>
+                                    <div class="event-detail">
+                                        <span>👥</span>
+                                        <span>180 confirmados</span>
+                                    </div>
+                                </div>
+                                <p class="event-description">
+                                    Reunión para organizar las próximas acciones en la región norte del país. 
+                                    Participación abierta a toda la ciudadanía.
+                                </p>
+                            </div>
+                            
+                            <div class="event-map">
+                                🗺️ Mapa / Cómo llegar (placeholder)
+                            </div>
+                            
+                            <div class="event-actions">
+                                <button class="btn-primary" style="flex: 1;" onclick="openEventModal(2)">
+                                    ✊ Inscribirme
+                                </button>
+                                <button class="btn-secondary" style="padding: 12px 16px;">
+                                    📅 Calendario
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="event-card" data-type="capacitaciones">
+                            <div class="event-header">
+                                <div class="event-meta">
+                                    <div style="font-size: 11px; font-weight: 600; text-transform: uppercase; color: #737373; background: #f5f5f5; padding: 4px 8px; border-radius: 4px;">
+                                        Próxima actividad
+                                    </div>
+                                    <span class="event-type-badge capacitacion">capacitaciones</span>
+                                </div>
+                                <h3 class="event-title">Taller de Liderazgo Comunitario</h3>
+                                <div class="event-details">
+                                    <div class="event-detail">
+                                        <span>📅</span>
+                                        <span>Jue 22 Feb, 14:00</span>
+                                    </div>
+                                    <div class="event-detail">
+                                        <span>📍</span>
+                                        <span>Universidad Nacional, Tegucigalpa</span>
+                                    </div>
+                                    <div class="event-detail">
+                                        <span>👥</span>
+                                        <span>45 confirmados</span>
+                                    </div>
+                                </div>
+                                <p class="event-description">
+                                    Capacitación gratuita para fortalecer el liderazgo en nuestras comunidades. 
+                                    Cupos limitados.
+                                </p>
+                            </div>
+                            
+                            <div class="event-map">
+                                🗺️ Mapa / Cómo llegar (placeholder)
+                            </div>
+                            
+                            <div class="event-actions">
+                                <button class="btn-primary" style="flex: 1;" onclick="openEventModal(3)">
+                                    ✊ Inscribirme
+                                </button>
+                                <button class="btn-secondary" style="padding: 12px 16px;">
+                                    📅 Calendario
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="event-card" data-type="capacitaciones">
+                            <div class="event-header">
+                                <div class="event-meta">
+                                    <div style="font-size: 11px; font-weight: 600; text-transform: uppercase; color: #737373; background: #f5f5f5; padding: 4px 8px; border-radius: 4px;">
+                                        Próxima actividad
+                                    </div>
+                                    <span class="event-type-badge capacitacion">capacitaciones</span>
+                                </div>
+                                <h3 class="event-title">Brigada Digital #Refundación</h3>
+                                <div class="event-details">
+                                    <div class="event-detail">
+                                        <span>📅</span>
+                                        <span>Mié 27 Feb, 20:00 (online)</span>
+                                    </div>
+                                    <div class="event-detail">
+                                        <span>📍</span>
+                                        <span>Plataforma Zoom</span>
+                                    </div>
+                                    <div class="event-detail">
+                                        <span>👥</span>
+                                        <span>320 confirmados</span>
+                                    </div>
+                                </div>
+                                <p class="event-description">
+                                    Capacitación virtual para coordinadores de redes sociales y activistas digitales.
+                                </p>
+                            </div>
+                            
+                            <div class="event-map">
+                                🗺️ Mapa / Cómo llegar (placeholder)
+                            </div>
+                            
+                            <div class="event-actions">
+                                <button class="btn-primary" style="flex: 1;" onclick="openEventModal(4)">
+                                    ✊ Inscribirme
+                                </button>
+                                <button class="btn-secondary" style="padding: 12px 16px;">
+                                    📅 Calendario
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Materiales Section -->
+            <section id="materiales" class="section-frame">
+                <div class="section-content">
+                    <div class="section-header">
+                        <h2 class="section-title">Herramientas de lucha</h2>
+                        <span class="section-hint">kit de militancia digital</span>
+                    </div>
+                    
+                    <div style="background: #fef3c7; border: 1px solid #fde68a; border-radius: 8px; padding: 16px; margin-bottom: 24px;">
+                        <div style="font-size: 14px; color: #92400e;">
+                            📁 <strong>Materiales verificados:</strong> Todos los recursos están aprobados por el equipo de comunicación oficial.
+                        </div>
+                    </div>
+
+                    <div class="materials-grid">
+                        <div class="material-featured">
+                            <div class="material-badge">⭐ Materiales destacados</div>
+                            <div class="carousel-container" id="featuredCarousel">
+                                <div class="carousel-track" id="carouselTrack">
+                                    <!-- Slide 1 -->
+                                    <div class="carousel-slide">
+                                        <div class="material-card" style="margin: 0; border: none;">
+                                            <div class="material-preview">
+                                                <div class="material-icon">🎯</div>
+                                                <div class="material-preview-title">Vista previa del afiche</div>
+                                                <div class="material-preview-subtitle">Marcha por la Justicia Social - 15 Feb</div>
+                                            </div>
+                                            <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; justify-content: center;">
+                                                <button class="download-btn png">📷 PNG 1080×1350</button>
+                                                <button class="download-btn story">📱 Story 1080×1920</button>
+                                                <button class="download-btn pdf">📄 PDF</button>
+                                            </div>
+                                            <button class="btn-primary" style="width: 100%;">
+                                                ⬇️ Descargar afiche
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide 2 -->
+                                    <div class="carousel-slide">
+                                        <div class="material-card" style="margin: 0; border: none;">
+                                            <div class="material-preview">
+                                                <div class="material-icon">📱</div>
+                                                <div class="material-preview-title">Kit de redes completo</div>
+                                                <div class="material-preview-subtitle">Portadas, historias y stickers - Enero 2024</div>
+                                            </div>
+                                            <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; justify-content: center;">
+                                                <button class="download-btn png">📱 Instagram</button>
+                                                <button class="download-btn story">📘 Facebook</button>
+                                                <button class="download-btn pdf">🐦 Twitter</button>
+                                            </div>
+                                            <button class="btn-primary" style="width: 100%;">
+                                                ⬇️ Descargar kit
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide 3 -->
+                                    <div class="carousel-slide">
+                                        <div class="material-card" style="margin: 0; border: none;">
+                                            <div class="material-preview">
+                                                <div class="material-icon">🎥</div>
+                                                <div class="material-preview-title">Videos promocionales</div>
+                                                <div class="material-preview-subtitle">Testimonios y clips para redes - HD</div>
+                                            </div>
+                                            <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; justify-content: center;">
+                                                <button class="download-btn png">🎬 MP4 HD</button>
+                                                <button class="download-btn story">📱 Verticales</button>
+                                                <button class="download-btn pdf">✂️ Clips cortos</button>
+                                            </div>
+                                            <button class="btn-primary" style="width: 100%;">
+                                                ⬇️ Descargar videos
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide 4 -->
+                                    <div class="carousel-slide">
+                                        <div class="material-card" style="margin: 0; border: none;">
+                                            <div class="material-preview">
+                                                <div class="material-icon">📊</div>
+                                                <div class="material-preview-title">Infografías de logros</div>
+                                                <div class="material-preview-subtitle">Estadísticas verificadas y gráficos</div>
+                                            </div>
+                                            <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; justify-content: center;">
+                                                <button class="download-btn png">📊 PNG Alta</button>
+                                                <button class="download-btn story">📱 Stories</button>
+                                                <button class="download-btn pdf">🖨️ Imprimible</button>
+                                            </div>
+                                            <button class="btn-primary" style="width: 100%;">
+                                                ⬇️ Descargar infografías
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide 5 -->
+                                    <div class="carousel-slide">
+                                        <div class="material-card" style="margin: 0; border: none;">
+                                            <div class="material-preview">
+                                                <div class="material-icon">🗣️</div>
+                                                <div class="material-preview-title">Audios para difusión</div>
+                                                <div class="material-preview-subtitle">Mensajes de voz y jingles</div>
+                                            </div>
+                                            <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; justify-content: center;">
+                                                <button class="download-btn png">🎵 MP3</button>
+                                                <button class="download-btn story">🎤 WAV</button>
+                                                <button class="download-btn pdf">📻 Radio</button>
+                                            </div>
+                                            <button class="btn-primary" style="width: 100%;">
+                                                ⬇️ Descargar audios
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide 6 -->
+                                    <div class="carousel-slide">
+                                        <div class="material-card" style="margin: 0; border: none;">
+                                            <div class="material-preview">
+                                                <div class="material-icon">📚</div>
+                                                <div class="material-preview-title">Guías de capacitación</div>
+                                                <div class="material-preview-subtitle">Manuales y documentos educativos</div>
+                                            </div>
+                                            <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; justify-content: center;">
+                                                <button class="download-btn png">📖 PDF</button>
+                                                <button class="download-btn story">📑 EPUB</button>
+                                                <button class="download-btn pdf">🖨️ Imprimible</button>
+                                            </div>
+                                            <button class="btn-primary" style="width: 100%;">
+                                                ⬇️ Descargar guías
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Controles del carrusel -->
+                                <button class="carousel-controls carousel-prev" onclick="previousSlide()">‹</button>
+                                <button class="carousel-controls carousel-next" onclick="nextSlide()">›</button>
+
+                                <!-- Indicadores -->
+                                <div class="carousel-indicators">
+                                    <div class="carousel-indicator active" onclick="goToSlide(0)"></div>
+                                    <div class="carousel-indicator" onclick="goToSlide(1)"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="material-list">
+                            <div class="material-item">
+                                <div class="material-item-icon">📱</div>
+                                <div class="material-item-content">
+                                    <h3 class="material-item-title">Kit de redes sociales completo</h3>
+                                    <p class="material-item-description">Portadas, historias, stickers para todas las plataformas</p>
+                                    <div class="material-formats">
+                                        <span class="format-tag">ZIP completo</span>
+                                    </div>
+                                </div>
+                                <button class="material-download">⬇️</button>
+                            </div>
+
+                            <div class="material-item">
+                                <div class="material-item-icon">📲</div>
+                                <div class="material-item-content">
+                                    <h3 class="material-item-title">Plantillas WhatsApp e IG Stories</h3>
+                                    <p class="material-item-description">Templates listos para usar en estados</p>
+                                    <div class="material-formats">
+                                        <span class="format-tag">Template pack</span>
+                                    </div>
+                                </div>
+                                <button class="material-download">⬇️</button>
+                            </div>
+
+                            <div class="material-item">
+                                <div class="material-item-icon">📚</div>
+                                <div class="material-item-content">
+                                    <h3 class="material-item-title">Guía: Organizar brigada digital</h3>
+                                    <p class="material-item-description">Manual paso a paso para coordinadores</p>
+                                    <div class="material-formats">
+                                        <span class="format-tag">PDF guía</span>
+                                    </div>
+                                </div>
+                                <button class="material-download">⬇️</button>
+                            </div>
+
+                            <div class="material-item">
+                                <div class="material-item-icon">🎨</div>
+                                <div class="material-item-content">
+                                    <h3 class="material-item-title">Lineamientos de marca oficiales</h3>
+                                    <p class="material-item-description">Colores, tipografías y uso correcto del logo</p>
+                                    <div class="material-formats">
+                                        <span class="format-tag">Kit de marca</span>
+                                    </div>
+                                </div>
+                                <button class="material-download">⬇️</button>
+                            </div>
+
+                            <div class="material-item">
+                                <div class="material-item-icon">💬</div>
+                                <div class="material-item-content">
+                                    <h3 class="material-item-title">Mensajes clave del movimiento</h3>
+                                    <p class="material-item-description">Frases y hashtags oficiales para unificar comunicación</p>
+                                    <div class="material-formats">
+                                        <span class="format-tag">Documento</span>
+                                    </div>
+                                </div>
+                                <button class="material-download">⬇️</button>
+                            </div>
+
+                            <div class="material-item">
+                                <div class="material-item-icon">🎥</div>
+                                <div class="material-item-content">
+                                    <h3 class="material-item-title">Videos promocionales</h3>
+                                    <p class="material-item-description">Clips y testimonios para redes sociales</p>
+                                    <div class="material-formats">
+                                        <span class="format-tag">MP4 HD</span>
+                                        <span class="format-tag">Stories</span>
+                                    </div>
+                                </div>
+                                <button class="material-download">⬇️</button>
+                            </div>
+
+                            <div class="material-item">
+                                <div class="material-item-icon">📊</div>
+                                <div class="material-item-content">
+                                    <h3 class="material-item-title">Infografías de logros</h3>
+                                    <p class="material-item-description">Gráficos con estadísticas y datos verificados</p>
+                                    <div class="material-formats">
+                                        <span class="format-tag">PNG</span>
+                                        <span class="format-tag">SVG</span>
+                                    </div>
+                                </div>
+                                <button class="material-download">⬇️</button>
+                            </div>
+
+                            <div class="material-item">
+                                <div class="material-item-icon">🗣️</div>
+                                <div class="material-item-content">
+                                    <h3 class="material-item-title">Audios para difusión</h3>
+                                    <p class="material-item-description">Mensajes de voz y jingles para compartir</p>
+                                    <div class="material-formats">
+                                        <span class="format-tag">MP3</span>
+                                        <span class="format-tag">WAV</span>
+                                    </div>
+                                </div>
+                                <button class="material-download">⬇️</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 40px;">
+                        <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 2px dashed #0ea5e9; border-radius: 16px; padding: 24px; margin-bottom: 16px;">
+                            <div style="font-size: 32px; margin-bottom: 12px;">📦</div>
+                            <h3 style="font-size: 18px; font-weight: 700; color: #0c4a6e; margin-bottom: 8px;">Kit completo de materiales</h3>
+                            <p style="font-size: 14px; color: #0369a1; margin-bottom: 20px;">Todos los recursos en un solo archivo ZIP organizado</p>
+                            <button class="btn-primary" style="font-size: 16px; padding: 12px 32px; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);">
+                                ⬇️ Descargar ahora
+                            </button>
+                        </div>
+                        <p style="font-size: 12px; color: #737373;">✅ Incluye afiches, plantillas, guías y lineamientos • Actualizado enero 2024</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Suscríbete Section -->
+            <section id="suscribite" class="section-frame">
+                <div class="section-content">
+                    <div class="section-header">
+                        <h2 class="section-title">Únete a la fuerza</h2>
+                        <span class="section-hint">formulario de registro</span>
+                    </div>
+                    
+                    <div class="subscribe-form-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
+                        <!-- Columna izquierda: Información y estadísticas -->
+                        <div>
+                            <div style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); border-radius: 16px; padding: 32px; margin-bottom: 24px;">
+                                <div style="font-size: 48px; text-align: center; margin-bottom: 16px;">✊</div>
+                                <h3 style="font-size: 24px; font-weight: 700; color: #1e3a8a; text-align: center; margin-bottom: 16px;">
+                                    ¡Únete a la fuerza!
+                                </h3>
+                           
+
+                                <!-- Sección "¿Por qué unirte?" -->
+                                <div style="background: rgba(255, 255, 255, 0.9); border-radius: 12px; padding: 24px; margin-bottom: 24px;">
+                                    <h4 style="font-size: 20px; font-weight: 700; color: #1e3a8a; margin-bottom: 16px; text-align: center;">¿Por qué unirte?</h4>
+                                    <ul style="list-style: none; padding: 0; margin: 0; color: #1d4ed8;">
+                                        <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
+                                            <span style="color: #059669; font-size: 16px;">✅</span>
+                                            <span style="font-size: 15px; font-weight: 500;">Acceso a materiales exclusivos</span>
+                                        </li>
+                                        <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
+                                            <span style="color: #059669; font-size: 16px;">✅</span>
+                                            <span style="font-size: 15px; font-weight: 500;">Invitaciones a eventos prioritarios</span>
+                                        </li>
+                                        <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
+                                            <span style="color: #059669; font-size: 16px;">✅</span>
+                                            <span style="font-size: 15px; font-weight: 500;">Capacitaciones de liderazgo</span>
+                                        </li>
+                                        <li style="display: flex; align-items: center; gap: 10px;">
+                                            <span style="color: #059669; font-size: 16px;">✅</span>
+                                            <span style="font-size: 15px; font-weight: 500;">Comunicación directa del movimiento</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                 <!-- Descripción del movimiento al PRINCIPIO ABSOLUTO -->
+                                 <div style="background: rgba(255, 255, 255, 0.9); border-radius: 12px; padding: 24px; margin-bottom: 24px; text-align: center;">
+                                    <p style="font-size: 18px; color: #1d4ed8; line-height: 1.6; margin: 0; font-weight: 500;">
+                                        Forma parte del movimiento que está refundando Honduras sobre bases de justicia y transparencia.
+                                    </p>
+                                </div>
+                                
+                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                                    <div style="text-align: center; background: white; padding: 16px; border-radius: 12px;">
+                                        <div style="font-size: 24px; font-weight: bold; color: #059669; margin-bottom: 4px;">+15,240</div>
+                                        <div style="font-size: 14px; color: #065f46;">Registrados</div>
+                                    </div>
+                                    <div style="text-align: center; background: white; padding: 16px; border-radius: 12px;">
+                                        <div style="font-size: 24px; font-weight: bold; color: #2563eb; margin-bottom: 4px;">🔒</div>
+                                        <div style="font-size: 14px; color: #1e40af;">Datos seguros</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Columna derecha: Formulario -->
+                        <div class="subscribe-form">
+
+                            <div style="background: white; border-radius: 16px; padding: 32px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);">
+                                <h3 style="font-size: 20px; font-weight: 700; color: #1e3a8a; margin-bottom: 8px; text-align: center;">
+                                    Completa tus datos
+                                </h3>
+                                <p style="font-size: 14px; color: #6b7280; text-align: center; margin-bottom: 24px;">
+                                    Todos los campos son seguros y confidenciales
+                                </p>
+
+                                <!-- Autenticación rápida -->
+                                <div style="margin-bottom: 32px;">
+                                    <div style="text-align: center; margin-bottom: 16px;">
+                                        <span style="font-size: 14px; color: #6b7280; font-weight: 500;">Acceso rápido y seguro</span>
+                                    </div>
+                                    
+                                    <div style="display: flex; gap: 12px; margin-bottom: 20px;">
+                                        <!-- Botón Facebook -->
+                                        <button type="button" onclick="handleFacebookAuth()" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px; background: #1877F2; color: white; border: none; padding: 14px 16px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 2px 8px rgba(24, 119, 242, 0.3);">
+                                            <span style="font-size: 18px;">📘</span>
+                                            <span>Facebook</span>
+                                        </button>
+                                        
+                                        <!-- Botón Google -->
+                                        <button type="button" onclick="handleGoogleAuth()" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px; background: white; color: #374151; border: 1px solid #d1d5db; padding: 14px 16px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);">
+                                            <span style="font-size: 18px;">🔍</span>
+                                            <span>Google</span>
+                                        </button>
+                                    </div>
+                                    
+                                    <div style="text-align: center; position: relative; margin-bottom: 20px;">
+                                        <div style="background: #f3f4f6; height: 1px; width: 100%;"></div>
+                                        <span style="background: white; padding: 0 16px; color: #9ca3af; font-size: 12px; font-weight: 500;">O completa el formulario manualmente</span>
+                                    </div>
+                                </div>
+
+                                <form onsubmit="handleFormSubmit(event)">
+                                    <div class="form-grid">
+                                        <div class="form-group">
+                                            <label class="form-label">Nombre *</label>
+                                            <input class="form-input" type="text" placeholder="Tu nombre" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Apellido *</label>
+                                            <input class="form-input" type="text" placeholder="Tu apellido" required>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-grid">
+                                        <div class="form-group">
+                                            <label class="form-label">Ciudad *</label>
+                                            <select class="form-select" required>
+                                                <option value="">Selecciona tu ciudad</option>
+                                                <option value="tegucigalpa">Tegucigalpa</option>
+                                                <option value="san-pedro-sula">San Pedro Sula</option>
+                                                <option value="la-ceiba">La Ceiba</option>
+                                                <option value="choluteca">Choluteca</option>
+                                                <option value="comayagua">Comayagua</option>
+                                                <option value="otra">Otra ciudad</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Correo electrónico *</label>
+                                            <input class="form-input" type="email" placeholder="tu@correo.com" required>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="form-label">Teléfono (opcional)</label>
+                                        <input class="form-input" type="tel" placeholder="+504 ...">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="form-label">¿Cómo querés participar? *</label>
+                                        <select class="form-select" required>
+                                            <option value="">Selecciona una opción</option>
+                                            <option value="redes">Voluntariado en redes sociales</option>
+                                            <option value="territorio">Voluntariado en territorio</option>
+                                            <option value="ambas">Ambas opciones</option>
+                                            <option value="eventos">Solo eventos y movilizaciones</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-checkbox">
+                                        <input type="checkbox" required>
+                                        <span class="form-checkbox-text">
+                                            Acepto la <a href="#" class="form-checkbox-link">Política de Privacidad</a> 
+                                            y autorizo recibir información del movimiento.
+                                        </span>
+                                    </div>
+                                    
+                                    <div style="text-align: center; margin: 24px 0;">
+                                        <button type="submit" class="form-button" style="width: 100%;">
+                                            ✊ Unirme a la fuerza
+                                        </button>
+                                        <div style="margin-top: 12px; font-size: 12px; color: #6b7280;">
+                                            🔒 Protegido por reCAPTCHA
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-messages" id="formMessages">
+                                        <div class="placeholder-message">
+                                            💡 <strong>Mensajes de confirmación aparecerán aquí</strong>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-grid">
+                    <div>
+                        <div class="footer-brand">
+                            <div class="footer-logo">FP</div>
+                            <span class="footer-brand-text">La Fuerza del Pueblo</span>
+                        </div>
+                        <p class="footer-description">
+                            Movimiento ciudadano comprometido con la refundación de Honduras 
+                            sobre bases de justicia, transparencia y dignidad.
+                        </p>
+                        <div class="footer-social">
+                            <a href="#" class="social-link">f</a>
+                            <a href="#" class="social-link">📷</a>
+                            <a href="#" class="social-link">🐦</a>
+                            <a href="#" class="social-link">📺</a>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="footer-section-title">Enlaces importantes</h3>
+                        <div class="footer-links">
+                            <a href="/privacidad" class="footer-link">Política de Privacidad</a>
+                            <a href="/terminos" class="footer-link">Términos y Condiciones</a>
+                            <a href="/prensa" class="footer-link">Prensa y medios</a>
+                            <a href="/contacto" class="footer-link">Contacto oficial</a>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="footer-section-title">Contacto</h3>
+                        <div class="footer-contact-item">📧 info@fuerzadelpueblo.hn</div>
+                        <div class="footer-contact-item">📞 +504 2234-5678</div>
+                        <div class="footer-contact-item">📍 Tegucigalpa, Honduras</div>
+                        <div class="footer-contact-item">🕐 Lun - Vie: 8:00 - 17:00</div>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <div class="footer-copyright">
+                        © 2024 La Fuerza del Pueblo Honduras para Adelante. Todos los derechos reservados.
+                    </div>
+                    <div class="footer-made">
+                        🇭🇳 Hecho con ❤️ para Honduras
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Event Registration Modal -->
+    <div id="eventModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Confirmar inscripción</h3>
+                <button class="modal-close" onclick="closeEventModal()">×</button>
+            </div>
+            <div class="modal-form">
+                <!-- Autenticación rápida para eventos -->
+                <div style="margin-bottom: 20px;">
+                    <div style="text-align: center; margin-bottom: 12px;">
+                        <span style="font-size: 13px; color: #6b7280; font-weight: 500;">Acceso rápido para eventos</span>
+                    </div>
+                    
+                    <div style="display: flex; gap: 8px; margin-bottom: 16px;">
+                        <!-- Botón Facebook -->
+                        <button type="button" onclick="handleEventFacebookAuth()" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 6px; background: #1877F2; color: white; border: none; padding: 10px 12px; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 2px 6px rgba(24, 119, 242, 0.3);">
+                            <span style="font-size: 16px;">📘</span>
+                            <span>Facebook</span>
+                        </button>
+                        
+                        <!-- Botón Google -->
+                        <button type="button" onclick="handleEventGoogleAuth()" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 6px; background: white; color: #374151; border: 1px solid #d1d5db; padding: 10px 12px; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);">
+                            <span style="font-size: 16px;">🔍</span>
+                            <span>Google</span>
+                        </button>
+                    </div>
+                    
+                    <div style="text-align: center; position: relative; margin-bottom: 16px;">
+                        <div style="background: #f3f4f6; height: 1px; width: 100%;"></div>
+                        <span style="background: white; padding: 0 12px; color: #9ca3af; font-size: 11px; font-weight: 500;">O completa manualmente</span>
+                    </div>
+                </div>
+
+                <input class="modal-input" type="text" placeholder="Nombre completo">
+                <input class="modal-input" type="email" placeholder="Correo electrónico">
+                <input class="modal-input" type="tel" placeholder="Teléfono (opcional)">
+            </div>
+            <div class="modal-actions">
+                <button class="btn-primary" style="flex: 1;" onclick="confirmRegistration()">
+                    Confirmar
+                </button>
+                <button class="btn-secondary" style="flex: 1;" onclick="closeEventModal()">
+                    Cancelar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+
+        // Mobile menu functionality
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('show');
+        }
+
+        // FAQ functionality
+        function toggleFAQ(index) {
+            const answer = document.getElementById(`faq-answer-${index}`);
+            const icon = document.getElementById(`faq-icon-${index}`);
+            
+            // Close all other FAQs
+            document.querySelectorAll('.faq-answer').forEach((el, i) => {
+                if (i !== index) {
+                    el.classList.remove('show');
+                    document.getElementById(`faq-icon-${i}`).textContent = '▼';
+                }
+            });
+            
+            // Toggle current FAQ
+            if (answer.classList.contains('show')) {
+                answer.classList.remove('show');
+                icon.textContent = '▼';
+            } else {
+                answer.classList.add('show');
+                icon.textContent = '▲';
+            }
+        }
+
+        // Copy to WhatsApp functionality
+        function copyToWhatsApp(id) {
+            const button = event.target;
+            const originalText = button.textContent;
+            
+            // Simulate copy action
+            button.textContent = '✅ ¡Copiado!';
+            button.classList.add('copied');
+            
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.classList.remove('copied');
+            }, 2000);
+        }
+
+        // Event filtering
+        function filterEvents(type) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            const events = document.querySelectorAll('.event-card');
+            
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            events.forEach(eventCard => {
+                if (type === 'todos' || eventCard.dataset.type === type) {
+                    eventCard.style.display = 'block';
+                } else {
+                    eventCard.style.display = 'none';
+                }
+            });
+        }
+
+        // Event modal functionality
+        function openEventModal(eventId) {
+            document.getElementById('eventModal').classList.remove('hidden');
+        }
+
+        function closeEventModal() {
+            document.getElementById('eventModal').classList.add('hidden');
+        }
+
+        function confirmRegistration() {
+            alert('¡Registro exitoso! Te contactaremos pronto con más detalles.');
+            closeEventModal();
+        }
+
+        // Autenticación rápida para eventos
+        function handleEventFacebookAuth() {
+            // Simular autenticación con Facebook para eventos
+            const facebookUser = {
+                name: 'Usuario Facebook',
+                email: 'usuario@facebook.com',
+                phone: '+504 8888-8888'
+            };
+            
+            // Llenar formulario del modal con datos de Facebook
+            fillEventFormWithAuthData('Facebook', facebookUser);
+            
+            // Mostrar mensaje de éxito
+            showEventAuthSuccess('Facebook', facebookUser.email);
+        }
+
+        function handleEventGoogleAuth() {
+            // Simular autenticación con Google para eventos
+            const googleUser = {
+                name: 'Usuario Google',
+                email: 'usuario@gmail.com',
+                phone: '+504 9999-9999'
+            };
+            
+            // Llenar formulario del modal con datos de Google
+            fillEventFormWithAuthData('Google', googleUser);
+            
+            // Mostrar mensaje de éxito
+            showEventAuthSuccess('Google', googleUser.email);
+        }
+
+        function fillEventFormWithAuthData(provider, data) {
+            // Llenar automáticamente los campos del modal de eventos
+            const nameInput = document.querySelector('#eventModal .modal-input[type="text"]');
+            const emailInput = document.querySelector('#eventModal .modal-input[type="email"]');
+            const phoneInput = document.querySelector('#eventModal .modal-input[type="tel"]');
+            
+            if (nameInput) nameInput.value = data.name;
+            if (emailInput) emailInput.value = data.email;
+            if (phoneInput) phoneInput.value = data.phone;
+            
+            // Agregar clase visual para indicar que está llenado
+            [nameInput, emailInput, phoneInput].forEach(input => {
+                if (input) {
+                    input.style.background = '#f0f9ff';
+                    input.style.borderColor = '#3b82f6';
+                }
+            });
+        }
+
+        function showEventAuthSuccess(provider, identifier) {
+            // Crear mensaje de éxito temporal en el modal
+            const modalForm = document.querySelector('#eventModal .modal-form');
+            const successMessage = document.createElement('div');
+            successMessage.style.cssText = 'background: #d1fae5; border: 1px solid #10b981; border-radius: 6px; padding: 12px; margin-bottom: 16px; text-align: center; font-size: 12px;';
+            successMessage.innerHTML = `
+                <div style="color: #065f46; font-weight: 600; margin-bottom: 4px;">
+                    ✅ Autenticado con ${provider}
+                </div>
+                <div style="color: #047857; font-size: 11px;">
+                    Formulario llenado automáticamente
+                </div>
+            `;
+            
+            // Insertar mensaje al inicio del formulario
+            modalForm.insertBefore(successMessage, modalForm.firstChild);
+            
+            // Remover mensaje después de 3 segundos
+            setTimeout(() => {
+                if (successMessage.parentNode) {
+                    successMessage.remove();
+                }
+            }, 3000);
+        }
+
+        // Form submission
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const messagesDiv = document.getElementById('formMessages');
+            
+            messagesDiv.innerHTML = `
+                <div class="success-message">
+                    <div class="success-icon">🎉</div>
+                    <div class="success-title">¡Gracias por unirte!</div>
+                    <div class="success-text">Te contactaremos pronto con más información.</div>
+                    <button class="success-action">📤 Compartir esta página con amigos</button>
+                </div>
+            `;
+        }
+
+        // Carousel functionality
+        let currentSlide = 0;
+        const totalSlides = 6;
+        const slidesPerView = 3;
+        const maxSlides = Math.max(0, totalSlides - slidesPerView);
+
+        function updateCarousel() {
+            const track = document.getElementById('carouselTrack');
+            const indicators = document.querySelectorAll('.carousel-indicator');
+            
+            if (track) {
+                const translateX = -(currentSlide * (100 / slidesPerView));
+                track.style.transform = `translateX(${translateX}%)`;
+            }
+            
+            indicators.forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === currentSlide);
+            });
+
+            // Update button states
+            const prevBtn = document.querySelector('.carousel-prev');
+            const nextBtn = document.querySelector('.carousel-next');
+            
+            if (prevBtn && nextBtn) {
+                prevBtn.style.opacity = currentSlide === 0 ? '0.5' : '1';
+                prevBtn.style.cursor = currentSlide === 0 ? 'not-allowed' : 'pointer';
+                
+                nextBtn.style.opacity = currentSlide >= maxSlides ? '0.5' : '1';
+                nextBtn.style.cursor = currentSlide >= maxSlides ? 'not-allowed' : 'pointer';
+            }
+        }
+
+        function nextSlide() {
+            if (currentSlide < maxSlides) {
+                currentSlide++;
+                updateCarousel();
+            }
+        }
+
+        function previousSlide() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateCarousel();
+            }
+        }
+
+        function goToSlide(slideIndex) {
+            currentSlide = slideIndex;
+            updateCarousel();
+        }
+
+        // Auto-slide every 8 seconds
+        let carouselInterval;
+        function startCarouselAutoplay() {
+            carouselInterval = setInterval(nextSlide, 8000);
+        }
+
+        function stopCarouselAutoplay() {
+            clearInterval(carouselInterval);
+        }
+
+        // Initialize dynamic content
+        document.addEventListener('DOMContentLoaded', function() {
+            // Update volunteer count periodically
+            let count = 15240;
+            setInterval(() => {
+                count += Math.floor(Math.random() * 3);
+                document.getElementById('volunteerCount').textContent = `+${count.toLocaleString()}`;
+            }, 5000);
+
+            // Update population impact number
+            document.getElementById('lastUpdate').textContent = '2.1M+';
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Download button functionality
+            document.querySelectorAll('.download-btn, .material-download').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    alert('Descarga iniciada...');
+                });
+            });
+
+            // Share button functionality
+            document.querySelectorAll('.action-btn.share').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    if (navigator.share) {
+                        navigator.share({
+                            title: 'La Fuerza del Pueblo',
+                            url: window.location.href
+                        });
+                    } else {
+                        alert('Enlace copiado al portapapeles');
+                    }
+                });
+            });
+
+            // Initialize carousel
+            const carouselContainer = document.getElementById('featuredCarousel');
+            if (carouselContainer) {
+                // Start autoplay
+                startCarouselAutoplay();
+                
+                // Pause on hover
+                carouselContainer.addEventListener('mouseenter', stopCarouselAutoplay);
+                carouselContainer.addEventListener('mouseleave', startCarouselAutoplay);
+                
+                // Touch/swipe support for mobile
+                let startX = 0;
+                let endX = 0;
+                
+                carouselContainer.addEventListener('touchstart', function(e) {
+                    startX = e.touches[0].clientX;
+                });
+                
+                carouselContainer.addEventListener('touchend', function(e) {
+                    endX = e.changedTouches[0].clientX;
+                    handleSwipe();
+                });
+                
+                function handleSwipe() {
+                    const threshold = 50;
+                    const diff = startX - endX;
+                    
+                    if (Math.abs(diff) > threshold) {
+                        if (diff > 0) {
+                            nextSlide();
+                        } else {
+                            previousSlide();
+                        }
+                    }
+                }
+            }
+        });
+
+        // Funciones de autenticación rápida
+        function handleFacebookAuth() {
+            // Simular autenticación con Facebook
+            const facebookUser = {
+                name: 'Usuario Facebook',
+                email: 'usuario@facebook.com',
+                phone: '+504 8888-8888'
+            };
+            
+            // Simular verificación exitosa
+            showAuthSuccess('Facebook', facebookUser.email);
+            // Llenar formulario con datos de Facebook
+            fillFormWithAuthData('Facebook', facebookUser);
+        }
+
+        function handleGoogleAuth() {
+            // Simular autenticación con Google
+            const googleUser = {
+                name: 'Usuario Google',
+                email: 'usuario@gmail.com',
+                phone: '+504 9999-9999'
+            };
+            
+            // Simular verificación exitosa
+            showAuthSuccess('Google', googleUser.email);
+            // Llenar formulario con datos de Google
+            fillFormWithAuthData('Google', googleUser);
+        }
+
+        function showAuthSuccess(provider, identifier) {
+            // Mostrar mensaje de éxito
+            const formMessages = document.getElementById('formMessages');
+            formMessages.innerHTML = `
+                <div style="background: #d1fae5; border: 1px solid #10b981; border-radius: 8px; padding: 16px; margin-bottom: 16px; text-align: center;">
+                    <div style="color: #065f46; font-weight: 600; margin-bottom: 8px;">
+                        ✅ Autenticación exitosa con ${provider}
+                    </div>
+                    <div style="color: #047857; font-size: 14px;">
+                        ${provider === 'Facebook' ? 'Cuenta: ' + identifier : 'Cuenta: ' + identifier}
+                    </div>
+                </div>
+            `;
+            
+            // Scroll hacia el mensaje
+            formMessages.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        function fillFormWithAuthData(provider, data) {
+            // Llenar automáticamente los campos del formulario
+            if (provider === 'Google') {
+                // Para Google, llenar con datos simulados
+                const nameInputs = document.querySelectorAll('input[type="text"]');
+                if (nameInputs[0]) nameInputs[0].value = data.name;
+                if (nameInputs[1]) nameInputs[1].value = 'Apellido';
+                
+                const emailInput = document.querySelector('input[type="email"]');
+                if (emailInput) emailInput.value = data.email;
+                
+                const phoneInput = document.querySelector('input[type="tel"]');
+                if (phoneInput) phoneInput.value = data.phone;
+                
+                // Seleccionar ciudad por defecto
+                const citySelect = document.querySelector('select');
+                if (citySelect) citySelect.value = 'tegucigalpa';
+                
+                // Seleccionar participación por defecto
+                const participationSelect = document.querySelectorAll('select')[1];
+                if (participationSelect) participationSelect.value = 'ambas';
+                
+                // Marcar checkbox de privacidad
+                const privacyCheckbox = document.querySelector('input[type="checkbox"]');
+                if (privacyCheckbox) privacyCheckbox.checked = true;
+                
+            } else if (provider === 'Facebook') {
+                // Para Facebook, llenar con datos completos
+                const nameInputs = document.querySelectorAll('input[type="text"]');
+                if (nameInputs[0]) nameInputs[0].value = data.name;
+                if (nameInputs[1]) nameInputs[1].value = 'Apellido';
+                
+                const emailInput = document.querySelector('input[type="email"]');
+                if (emailInput) emailInput.value = data.email;
+                
+                const phoneInput = document.querySelector('input[type="tel"]');
+                if (phoneInput) phoneInput.value = data.phone;
+                
+                // Seleccionar ciudad por defecto
+                const citySelect = document.querySelector('select');
+                if (citySelect) citySelect.value = 'tegucigalpa';
+                
+                // Seleccionar participación por defecto
+                const participationSelect = document.querySelectorAll('select')[1];
+                if (participationSelect) participationSelect.value = 'ambas';
+                
+                // Marcar checkbox de privacidad
+                const privacyCheckbox = document.querySelector('input[type="checkbox"]');
+                if (privacyCheckbox) privacyCheckbox.checked = true;
+            }
+            
+            // Mostrar mensaje de formulario llenado
+            setTimeout(() => {
+                const formMessages = document.getElementById('formMessages');
+                formMessages.innerHTML += `
+                    <div style="background: #dbeafe; border: 1px solid #3b82f6; border-radius: 8px; padding: 12px; margin-top: 12px; text-align: center;">
+                        <div style="color: #1e40af; font-size: 14px;">
+                            📝 Formulario llenado automáticamente. Revisa y envía.
+                        </div>
+                    </div>
+                `;
+            }, 1000);
+        }
+          </script>
+  </body>
+  </html> 
